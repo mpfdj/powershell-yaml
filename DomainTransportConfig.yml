@@ -1,9 +1,9 @@
 domainConfiguration: 
   regular:
-    # - domainName: default
-      # transport: tibtcp
-      # tcpSelfUrl: localhost:2581 
-      # tcpDaemonUrl: localhost:2561
+#    - domainName: default
+#      transport: tibtcp
+#      tcpSelfUrl: localhost:2581
+#      tcpDaemonUrl: localhost:2561
 #     securityPolicy: <security_Policy>
 #     tcpSslKeyStore: <file-name> 
 #     tcpSslTrustStore: <file-name> 
@@ -13,7 +13,7 @@ domainConfiguration:
 #     tcpSslProtocol: TLSv1.2
 #     tcpSslEnabledAlgorithms: TLS_RSA_WITH_AES_128_CBC_SHA
 #
-    - domainName: <DOMAIN>
+    - domainName: <DOMAIN_NAME>
       transport: tibrv
       rvService: <PORT>
       rvNetwork: 
