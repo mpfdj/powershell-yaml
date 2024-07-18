@@ -1,0 +1,45 @@
+domainConfiguration: 
+  regular:
+    # - domainName: default
+      # transport: tibtcp
+      # tcpSelfUrl: localhost:2581 
+      # tcpDaemonUrl: localhost:2561
+#     securityPolicy: <security_Policy>
+#     tcpSslKeyStore: <file-name> 
+#     tcpSslTrustStore: <file-name> 
+#     tcpSslKeyStorePassword: <password_string> 
+#     tcpSslKeyPassword: <password_string> 
+#     tcpSslTrustStorePassword: <password_string> 
+#     tcpSslProtocol: TLSv1.2
+#     tcpSslEnabledAlgorithms: TLS_RSA_WITH_AES_128_CBC_SHA
+#
+    - domainName: <DOMAIN>
+      transport: tibrv
+      rvService: <PORT>
+      rvNetwork: 
+      rvDaemon: <FQDN>:<PORT>
+      securityPolicy: COM.TIBCO.hawk.security.trusted.TrustedWithDomain
+#  
+#    - domainName: <domain name>
+#      transport: tibems
+#      emsServerUrl: <server url name> 
+#      emsUserName: <user name> 
+#      emsPassword: <password_string> 
+#      emsSslVendor: <SSL vendor>  
+#      emsSslTrace: <SSL trace>  
+#      emsSslTrusted: <SSL trusted>  
+#      emsSslPrivateKey: <SSL private key>  
+#      emsSslExpectedHostname: <SSL expected>  
+#      emsSslPassword: <password_string>
+#      securityPolicy: <security_Policy>
+#      emsSslIdentity:  <identity store>
+#      emsSslNoVerifyHost: true #do not verify server
+#      emsSslNoVerifyHostname: true #do not verify hostname
+#      emsSslCiphers: <cipher suite-names>
+#  
+#  proxy:
+#    - domainName: <domain name>
+#      host: <domain IP>:<domain port> 
+#      credentials: <username>:<encrypted password> 
+#      securedChannel: true #domain is to be over ssl
+

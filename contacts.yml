@@ -1,0 +1,36 @@
+---
+markus:
+  name: Mark
+  surname: Simmon
+  emails:
+    personal: mark_@gmail.com
+    professional: mark.simmon@enterprise.com
+johan:
+  name: Johan
+  surname: McGuinness
+  emails:
+    - personal: johnanmg@hotmail.com
+    - personal: johnan_mguinness@yahoo.com
+    - professional: johan@gmail.com
+peter_stone:
+  name: Peter
+  surname: Stone
+  emails:
+    - 
+      address: peter_stone@yahoo.com
+      type: personal
+      default: true
+    - 
+      address: peter@mycompany.com
+      type: professional
+michaelly:
+  name: Michael
+  surname: Sunset
+  emails:
+    - email:
+        address: msunset@yahoo.com  
+        type: personal
+        default: true
+    - email:
+        address: michael.sunset@myco.com
+        type: professional
