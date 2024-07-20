@@ -17,7 +17,7 @@
 
 # Check for dependencies
 # https://www.powershellgallery.com/packages/powershell-yaml
-Package Details> Dependencies > This module has no dependencies.
+Package Details > Dependencies > This module has no dependencies.
 
 
 # Install a module offline
@@ -34,3 +34,7 @@ Get-Help ConvertTo-YAML
 
 Get-Command ConvertFrom-YAML
 Get-Command ConvertTo-YAML
+
+
+# List all commands in Module
+Get-Module Microsoft.PowerShell.Management -ListAvailable | % { $_.ExportedCommands.Values } | sort

@@ -1,36 +1,33 @@
----
-markus:
-  name: Mark
-  surname: Simmon
-  emails:
-    personal: mark_@gmail.com
-    professional: mark.simmon@enterprise.com
-johan:
-  name: Johan
-  surname: McGuinness
-  emails:
-    - personal: johnanmg@hotmail.com
-    - personal: johnan_mguinness@yahoo.com
-    - professional: johan@gmail.com
 peter_stone:
+  emails:
+  - default: true
+    type: personal
+    address: peter_stone@yahoo.com
+  - type: professional
+    address: peter@mycompany.com
   name: Peter
   surname: Stone
-  emails:
-    - 
-      address: peter_stone@yahoo.com
-      type: personal
-      default: true
-    - 
-      address: peter@mycompany.com
-      type: professional
 michaelly:
+  emails:
+  - email:
+      default: true
+      type: personal
+      address: msunset@yahoo.com
+  - email:
+      type: professional
+      address: michael.sunset@myco.com
   name: Michael
   surname: Sunset
+johan:
   emails:
-    - email:
-        address: msunset@yahoo.com  
-        type: personal
-        default: true
-    - email:
-        address: michael.sunset@myco.com
-        type: professional
+  - personal: johnanmg@hotmail.com
+  - personal: johnan_mguinness@yahoo.com
+  - professional: johan@gmail.com
+  name: Johan
+  surname: McGuinness
+markus:
+  emails:
+    professional: mark.simmon@enterprise.com
+    personal: miel4
+  name: Mark
+  surname: Simmon

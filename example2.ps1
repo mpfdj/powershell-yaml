@@ -1,10 +1,21 @@
-#[PSCustomObject]$yaml = (ConvertFrom-Yaml -yaml (Get-Content -Raw "C:\Users\TO11RC\Downloads\Hawk console\contacts.yml"))
-[PSCustomObject]$yaml = Get-Content -Path "C:\Users\TO11RC\Downloads\Hawk console\contacts.yml" -Raw | ConvertFrom-Yaml
+# Read yaml file
+[PSCustomObject]$yaml = Get-Content -Path "D:\github\powershell-yaml\contacts.yml" -Raw | ConvertFrom-Yaml
+
+# Print markus Object
 $yaml.markus
 
-$yaml.markus.emails.personal = "miel3"
+# Set value in yaml Object
+$yaml.markus.emails.personal = "miel4"
+
+# Print email
 Write-Host "email: " + $yaml.markus.emails.personal
 
+# Write Object to file
+ConvertTo-Yaml -Data $yaml -OutFile "D:\github\powershell-yaml\contacts.yml" -Force
 
 
-ConvertTo-Yaml -Data $yaml -OutFile "C:\Users\TO11RC\Downloads\Hawk console\contacts_updated.yml" -Force
+# Print types
+#($yaml.GetType() | Select-Object -ExpandProperty UnderlyingSystemType | Out-String).Trim()
+$yaml.GetType() | Select-Object -ExpandProperty UnderlyingSystemType | ForEach-Object { "yaml: $($_.BaseType).$($_.Name)" }
+$yaml.michaelly.emails.GetType() | Select-Object -ExpandProperty UnderlyingSystemType | ForEach-Object { "yaml.michaelly.emails: $($_.BaseType).$($_.Name)" }
+$yaml.markus.emails.personal.GetType() | Select-Object -ExpandProperty UnderlyingSystemType | ForEach-Object { "yaml.michaelly.emails.personal: $($_.BaseType).$($_.Name)" }
